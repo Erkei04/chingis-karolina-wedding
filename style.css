@@ -116,7 +116,7 @@ body {
 }
 
 .heart-decor {
-    color: var(--color-rose);
+    color: var(--color-rose-dark);
     font-size: 1.3rem;
     margin: 0 8px;
     display: inline-block;
@@ -134,9 +134,12 @@ body {
     50% { transform: translateY(-6px); opacity: 1; }
 }
 
-@keyframes heartPulse {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.15); opacity: 1; }
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.12); }
+    60% { transform: scale(1); }
 }
 
 .btn {
@@ -196,7 +199,7 @@ body {
 
 .name-ampersand {
     display: block;
-    font-size: clamp(2rem, 6vw, 2.5rem);
+    font-size: clamp(2.5rem, 7.5vw, 3.2rem);
     font-weight: 400;
     color: var(--color-rose-dark);
     margin: 15px 0;
@@ -225,17 +228,27 @@ body {
 }
 
 .names-hero-hearts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin-top: 35px;
+    visibility: visible;
+    opacity: 1;
 }
 
 .names-hero-hearts .heart {
-    font-size: 1.6rem;
+    display: inline-block;
+    font-size: 2rem;
     margin: 0 12px;
+    visibility: visible;
+    opacity: 1;
+    color: var(--color-rose-dark);
+    animation: heartbeat 1.5s ease-in-out infinite;
 }
 
 .names-hero-hearts .heart:nth-child(2) {
-    font-size: 2rem;
-    animation: heartPulse 2s ease-in-out infinite;
+    font-size: 2.5rem;
 }
 
 /* Calendar Section */
@@ -315,10 +328,11 @@ body {
 
 .calendar-day.wedding-day .heart-svg {
     position: absolute;
-    width: 42px;
-    height: 42px;
+    width: 54px;
+    height: 54px;
     pointer-events: none;
     z-index: -1;
+    animation: heartbeat 1.5s ease-in-out infinite;
 }
 
 .calendar-day.wedding-day svg + span,
@@ -336,6 +350,11 @@ body {
     .calendar-day.wedding-day,
     .calendar-day.wedding-day span {
         font-size: 18px !important;
+    }
+    
+    .calendar-day.wedding-day .heart-svg {
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -380,7 +399,24 @@ body {
 }
 
 .welcome-hearts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin-top: 30px;
+    font-size: 2.3rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+.welcome-hearts .heart-decor {
+    display: inline-block;
+    font-size: 2.3rem;
+    margin: 0 12px;
+    visibility: visible;
+    opacity: 1;
+    color: var(--color-rose-dark);
+    animation: heartbeat 2s ease-in-out infinite;
 }
 
 /* Program Section */
@@ -429,12 +465,71 @@ body {
     text-align: center;
 }
 
+.dresscode-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-rose-dark), transparent);
+    margin: 15px auto;
+}
+
 .dresscode-text {
     font-family: var(--font-serif);
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-style: italic;
     color: var(--color-text);
-    margin-top: 20px;
+    margin-top: 25px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.dresscode-subtitle {
+    font-family: var(--font-serif);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--color-rose-dark);
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* No Крик Section */
+.no-cryk-section {
+    padding: 80px 25px;
+    background-color: var(--color-ivory);
+    text-align: center;
+}
+
+.section-ornament {
+    color: var(--color-rose-dark);
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.no-cryk-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-style: italic;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* Gift Section */
+.gift-section {
+    padding: 80px 25px;
+    background-color: var(--color-blush);
+    text-align: center;
+}
+
+.gift-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-style: italic;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 500px;
 }
 
 /* Wishes Section */
@@ -672,7 +767,7 @@ body {
     }
 
     .name-ampersand {
-        font-size: clamp(1.6rem, 5vw, 2rem);
+        font-size: clamp(2rem, 6vw, 2.5rem);
         margin: 12px 0;
     }
 
@@ -695,12 +790,12 @@ body {
     }
 
     .names-hero-hearts .heart {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         margin: 0 10px;
     }
 
     .names-hero-hearts .heart:nth-child(2) {
-        font-size: 1.7rem;
+        font-size: 2.2rem;
     }
 
     .calendar-section {
@@ -749,6 +844,11 @@ body {
         margin-top: 25px;
     }
 
+    .welcome-hearts,
+    .welcome-hearts .heart-decor {
+        font-size: 2rem;
+    }
+
     .program-section {
         padding: 60px 15px;
     }
@@ -776,6 +876,22 @@ body {
 
     .dresscode-text {
         font-size: 1.4rem;
+    }
+
+    .no-cryk-section {
+        padding: 60px 15px;
+    }
+
+    .no-cryk-text {
+        font-size: 1.05rem;
+    }
+
+    .gift-section {
+        padding: 60px 15px;
+    }
+
+    .gift-text {
+        font-size: 1.05rem;
     }
 
     .wishes-section {
@@ -922,7 +1038,7 @@ body {
     }
 
     .name-ampersand {
-        font-size: clamp(1.4rem, 5vw, 1.8rem);
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
         margin: 10px 0;
     }
 
@@ -945,12 +1061,12 @@ body {
     }
 
     .names-hero-hearts .heart {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin: 0 8px;
     }
 
     .names-hero-hearts .heart:nth-child(2) {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .calendar-section {
@@ -1001,6 +1117,11 @@ body {
         margin-top: 20px;
     }
 
+    .welcome-hearts,
+    .welcome-hearts .heart-decor {
+        font-size: 1.8rem;
+    }
+
     .program-section {
         padding: 50px 12px;
     }
@@ -1030,8 +1151,13 @@ body {
         padding: 50px 12px;
     }
 
-    .dresscode-text {
-        font-size: 1.2rem;
+.dresscode-text {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .dresscode-subtitle {
+        font-size: 1rem;
     }
 
     .wishes-section {
