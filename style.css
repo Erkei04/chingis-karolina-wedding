@@ -566,16 +566,12 @@ body {
 
 .organizer-phone {
     font-family: var(--font-sans);
-    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+    font-size: 22px;
     font-weight: 500;
-    color: var(--color-accent);
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-.organizer-phone:hover {
     color: var(--color-rose-dark);
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
 }
 
 /* Location Section */
