@@ -5,19 +5,21 @@
 }
 
 :root {
-    --color-ivory: #FDF8F3;
-    --color-cream: #FAF6F1;
+    --color-ivory: #FCF8F6;
+    --color-cream: #FFF9F7;
     --color-beige: #F5EDE4;
     --color-blush: #F8F0F0;
-    --color-rose: #E8D0D0;
-    --color-rose-dark: #D4A5A5;
-    --color-text: #5A5A5A;
-    --color-text-light: #8A8A8A;
-    --color-accent: #C9A5A5;
+    --color-rose: #E6A8A8;
+    --color-rose-dark: #D98C8C;
+    --color-text: #3F3434;
+    --color-text-main: #3F3434;
+    --color-text-paragraph: #4F4343;
+    --color-text-secondary: #7D5F5F;
+    --color-accent: #C97878;
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Montserrat', Arial, sans-serif;
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
-    --shadow-btn: 0 6px 25px rgba(201, 165, 165, 0.35);
+    --shadow-btn: 0 6px 25px rgba(207, 165, 165, 0.35);
 }
 
 html {
@@ -27,7 +29,7 @@ html {
 body {
     font-family: var(--font-sans);
     background-color: var(--color-ivory);
-    color: var(--color-text);
+    color: var(--color-text-paragraph);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -79,10 +81,10 @@ body {
 
 .section-title {
     font-family: var(--font-serif);
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-size: clamp(2rem, 4.5vw, 2.6rem);
     font-weight: 500;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-main);
     letter-spacing: 2px;
     margin-bottom: 30px;
 }
@@ -145,7 +147,7 @@ body {
 .btn {
     display: inline-block;
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -162,7 +164,7 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 35px rgba(201, 165, 165, 0.45);
+    box-shadow: 0 10px 35px rgba(207, 165, 165, 0.45);
 }
 
 /* Names Hero Section */
@@ -185,21 +187,21 @@ body {
 .names-hero-title {
     font-family: var(--font-serif);
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-text-main);
     margin: 30px 0 20px;
 }
 
 .name-first,
 .name-second {
     display: block;
-    font-size: clamp(3rem, 10vw, 4rem);
+    font-size: clamp(3.2rem, 10vw, 4.2rem);
     letter-spacing: 5px;
     line-height: 1.2;
 }
 
 .name-ampersand {
     display: block;
-    font-size: clamp(2.5rem, 7.5vw, 3.2rem);
+    font-size: clamp(2.8rem, 8vw, 3.5rem);
     font-weight: 400;
     color: var(--color-rose-dark);
     margin: 15px 0;
@@ -223,7 +225,7 @@ body {
     font-family: var(--font-serif);
     font-size: clamp(1.1rem, 3vw, 1.4rem);
     font-weight: 500;
-    color: var(--color-text-light);
+    color: var(--color-text-secondary);
     letter-spacing: 3px;
 }
 
@@ -282,7 +284,7 @@ body {
 
 .calendar-day-name {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--color-accent);
     text-align: center;
@@ -296,7 +298,7 @@ body {
 .calendar-date {
     font-family: var(--font-serif);
     font-size: 1.3rem;
-    color: var(--color-text);
+    color: #433838;
     text-align: center;
     padding: 12px 5px;
     border-radius: 50%;
@@ -365,7 +367,7 @@ body {
 }
 
 .heart-path {
-    fill: #d8a1a1;
+    fill: #D98C8C;
 }
 
 .heart-text {
@@ -391,9 +393,9 @@ body {
 
 .welcome-message {
     font-family: var(--font-serif);
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.4rem, 3vw, 1.7rem);
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text-paragraph);
     line-height: 1.8;
     margin: 25px 0;
 }
@@ -444,18 +446,18 @@ body {
 .program-time {
     font-size: clamp(1.4rem, 4vw, 1.8rem);
     font-weight: 600;
-    color: var(--color-rose-dark);
+    color: #C97878;
     letter-spacing: 1px;
 }
 
 .program-divider {
     font-size: 1.4rem;
-    color: var(--color-text-light);
+    color: var(--color-text-secondary);
 }
 
 .program-text {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
-    color: var(--color-text);
+    color: var(--color-text-main);
 }
 
 /* Dress Code Section */
@@ -474,9 +476,9 @@ body {
 
 .dresscode-text {
     font-family: var(--font-serif);
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.4rem, 3vw, 1.7rem);
     font-style: italic;
-    color: var(--color-text);
+    color: var(--color-text-paragraph);
     margin-top: 25px;
     max-width: 550px;
     margin-left: auto;
@@ -487,7 +489,7 @@ body {
 .dresscode-subtitle {
     font-family: var(--font-serif);
     font-size: clamp(1rem, 2.5vw, 1.2rem);
-    color: var(--color-rose-dark);
+    color: #C97878;
     font-style: italic;
     margin-top: 15px;
 }
@@ -507,9 +509,9 @@ body {
 
 .no-cryk-text {
     font-family: var(--font-serif);
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-size: clamp(1.25rem, 2.5vw, 1.45rem);
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text-paragraph);
     line-height: 1.8;
     margin: 20px auto;
     max-width: 500px;
@@ -524,9 +526,9 @@ body {
 
 .gift-text {
     font-family: var(--font-serif);
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-size: clamp(1.25rem, 2.5vw, 1.45rem);
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text-paragraph);
     line-height: 1.8;
     margin: 20px auto;
     max-width: 500px;
@@ -546,7 +548,7 @@ body {
 .wish-item {
     font-family: var(--font-serif);
     font-size: clamp(1.3rem, 3.5vw, 1.6rem);
-    color: var(--color-text);
+    color: var(--color-text-main);
     margin: 15px 0;
 }
 
@@ -558,9 +560,9 @@ body {
 
 .organizer-note {
     font-family: var(--font-serif);
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text-paragraph);
     margin-bottom: 15px;
 }
 
@@ -568,7 +570,7 @@ body {
     font-family: var(--font-sans);
     font-size: 22px;
     font-weight: 500;
-    color: var(--color-rose-dark);
+    color: #C97878;
     letter-spacing: 1px;
     text-align: center;
     margin: 0;
@@ -589,7 +591,7 @@ body {
 .location-address {
     font-family: var(--font-serif);
     font-size: clamp(1.2rem, 3vw, 1.5rem);
-    color: var(--color-text);
+    color: var(--color-text-main);
     line-height: 1.7;
     margin-top: 15px;
 }
@@ -625,7 +627,7 @@ body {
     font-family: var(--font-serif);
     font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-text-main);
     line-height: 1;
 }
 
@@ -633,7 +635,7 @@ body {
     font-family: var(--font-sans);
     font-size: 0.9rem;
     font-weight: 400;
-    color: var(--color-text-light);
+    color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 10px;
@@ -655,15 +657,15 @@ body {
 
 .rsvp-text {
     font-family: var(--font-serif);
-    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text-paragraph);
     line-height: 1.7;
     margin-bottom: 30px;
 }
 
 .rsvp-btn {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     padding: 20px 60px;
 }
 
@@ -689,7 +691,7 @@ body {
     font-family: var(--font-serif);
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-style: italic;
-    color: var(--color-text);
+    color: var(--color-text-main);
     margin: 25px 0;
     line-height: 1.7;
 }
@@ -698,7 +700,7 @@ body {
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 600;
-    color: var(--color-rose-dark);
+    color: #C97878;
     letter-spacing: 5px;
     margin-top: 30px;
 }
@@ -707,7 +709,7 @@ body {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 300;
-    color: var(--color-text-light);
+    color: var(--color-text-secondary);
     letter-spacing: 3px;
     margin-top: 15px;
 }
@@ -721,13 +723,17 @@ body {
 
 .footer p {
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text-paragraph);
 }
 
 /* ===== MOBILE STYLES (max-width: 768px) ===== */
 @media (max-width: 768px) {
+    body {
+        line-height: 1.85;
+    }
+
     .ornament {
         width: 100px;
         height: 100px;
@@ -738,7 +744,7 @@ body {
     }
 
     .section-title {
-        font-size: clamp(1.6rem, 5vw, 2rem);
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
         margin-bottom: 25px;
         letter-spacing: 1px;
     }
@@ -832,8 +838,9 @@ body {
     }
 
     .welcome-message {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
         margin: 20px 0;
+        line-height: 1.9;
     }
 
     .welcome-hearts {
@@ -879,7 +886,9 @@ body {
     }
 
     .no-cryk-text {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        margin: 10px 0;
+        line-height: 1.8;
     }
 
     .gift-section {
@@ -887,7 +896,9 @@ body {
     }
 
     .gift-text {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        margin: 10px 0;
+        line-height: 1.8;
     }
 
     .wishes-section {
@@ -953,11 +964,12 @@ body {
     }
 
     .rsvp-text {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        line-height: 1.9;
     }
 
     .rsvp-btn {
-        font-size: 1rem;
+        font-size: 1.05rem;
         padding: 18px 50px;
     }
 
@@ -980,6 +992,10 @@ body {
 
 /* ===== SMALL MOBILE STYLES (max-width: 480px) ===== */
 @media (max-width: 480px) {
+    body {
+        line-height: 1.9;
+    }
+
     .ornament {
         width: 70px;
         height: 70px;
@@ -990,7 +1006,7 @@ body {
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin-bottom: 20px;
         letter-spacing: 1px;
     }
@@ -1104,9 +1120,9 @@ body {
     }
 
     .welcome-message {
-        font-size: 1.05rem;
+        font-size: 1.2rem;
         margin: 15px 0;
-        line-height: 1.6;
+        line-height: 1.8;
     }
 
     .welcome-hearts {
@@ -1225,7 +1241,8 @@ body {
     }
 
     .rsvp-text {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
     }
 
     .rsvp-btn {
@@ -1264,6 +1281,6 @@ body {
     }
 
     .footer p {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
     }
 }
